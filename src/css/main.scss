@@ -1,1 +1,486 @@
-/* Your SCSS here. */
+// Simple SCSS variables
+$blue: #2563eb;
+$dark: #1f2937;
+$light: #f4f4f4;
+$white: white;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 68px;
+}
+
+html:has(.navbar.compact) { scroll-padding-top: 43px; }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+section {
+  padding: 70px 20px;
+}
+
+.section-container {
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.section-intro {
+  margin-bottom: 35px;
+}
+
+
+/* =====================
+   NAVBAR
+===================== */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: $dark;
+  padding: 20px;
+  z-index: 1000;
+  transition: 0.3s;
+}
+
+.navbar.compact {
+  padding: 10px;
+
+  .brand { font-size: 20px; }
+  .nav-link { font-size: 14px; }
+}
+
+.nav-container {
+  max-width: 1000px;
+  margin: auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  color: $white;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  color: $white;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: #93c5fd;
+}
+
+.nav-link.active {
+  color: #60a5fa;
+  border-bottom: 2px solid #60a5fa;
+}
+
+
+/* =====================
+   HOME
+===================== */
+
+.hero {
+  height: 90vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  color: $white;
+
+  background-color: $dark;
+  background-image: url("../assets/hero-background.svg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.hero-content {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+}
+
+.hero h1 {
+  font-size: 50px;
+  margin: 10px;
+}
+
+.hero h2 {
+  font-weight: normal;
+}
+
+.hero-buttons {
+  margin-top: 25px;
+}
+
+.button {
+  display: inline-block;
+
+  padding: 10px 20px;
+  margin: 5px;
+
+  text-decoration: none;
+
+  border-radius: 5px;
+}
+
+.primary-button {
+  background-color: $blue;
+  color: $white;
+}
+
+.secondary-button {
+  background-color: $white;
+  color: $dark;
+}
+
+
+/* =====================
+   ABOUT
+===================== */
+
+.about {
+  background-color: $white;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.about-card {
+  background-color: $light;
+  padding: 25px;
+  border-radius: 8px;
+}
+
+.about-card i {
+  font-size: 35px;
+  color: $blue;
+}
+
+
+/* =====================
+   PROJECTS / CAROUSEL
+===================== */
+
+.projects {
+  background-color: $dark;
+  color: $white;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-content {
+  width: 70%;
+}
+
+.project-slide {
+  display: none;
+  padding: 30px;
+}
+
+.project-slide.active {
+  display: block;
+  animation: fade 0.5s;
+}
+
+.project-icon {
+  font-size: 45px;
+  color: #60a5fa;
+}
+
+.tech-list span {
+  display: inline-block;
+
+  background-color: $blue;
+
+  padding: 5px 10px;
+  margin: 5px;
+
+  border-radius: 5px;
+}
+
+.carousel-arrow {
+  background-color: $white;
+  border: none;
+
+  font-size: 20px;
+
+  width: 40px;
+  height: 40px;
+
+  cursor: pointer;
+}
+
+.details-button {
+  background-color: $blue;
+  color: $white;
+
+  border: none;
+  padding: 10px 15px;
+
+  margin-top: 15px;
+
+  cursor: pointer;
+}
+
+.carousel-dots {
+  margin-top: 20px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+
+  border: none;
+  border-radius: 50%;
+
+  background-color: gray;
+
+  margin: 3px;
+
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: $blue;
+}
+
+.video-section {
+  background-color: $white;
+  text-align: center;
+}
+
+.project-video {
+  width: 80%;
+  max-width: 800px;
+}
+
+
+/* =====================
+   SKILLS
+===================== */
+
+.skills {
+  background-color: $light;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.skill-column {
+  background-color: $white;
+  padding: 25px;
+}
+
+.skill-column i {
+  font-size: 35px;
+  color: $blue;
+}
+
+
+
+
+/* =====================
+   FOOTER
+===================== */
+
+.footer {
+  background-color: $dark;
+  color: $white;
+
+  text-align: center;
+
+  padding: 70px 20px;
+}
+
+.email-link {
+  color: #60a5fa;
+}
+
+.social-links {
+  margin: 25px;
+}
+
+.social-links a {
+  color: $white;
+
+  font-size: 30px;
+
+  margin: 10px;
+
+  text-decoration: none;
+}
+
+
+/* =====================
+   MODAL
+===================== */
+
+.modal {
+  display: none;
+
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.7);
+
+  justify-content: center;
+  align-items: center;
+
+  z-index: 2000;
+}
+
+.modal.open {
+  display: flex;
+}
+
+.modal-content {
+  background-color: $white;
+
+  width: 500px;
+  max-width: 90%;
+
+  padding: 30px;
+
+  text-align: center;
+
+  position: relative;
+}
+
+.close-modal {
+  position: absolute;
+
+  top: 10px;
+  right: 10px;
+
+  border: none;
+  background: none;
+
+  font-size: 25px;
+
+  cursor: pointer;
+}
+
+
+/* =====================
+   SIMPLE ANIMATION
+===================== */
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* =====================
+   RESPONSIVE DESIGN
+===================== */
+
+@media (max-width: 900px) {
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+@media (max-width: 768px) {
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-links {
+    gap: 10px;
+  }
+
+  .nav-link {
+    font-size: 16px;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  .carousel-content {
+    width: 80%;
+  }
+
+}
+
+.modal-image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+.brand, .nav-link { transition: font-size 0.3s; }
+
+body.modal-open { overflow: hidden; }
+.modal { padding: 20px; overflow-y: auto; }
+.modal-content { max-height: 100%; overflow-y: auto; }
+a:focus-visible, button:focus-visible { outline: 3px solid #60a5fa; outline-offset: 4px; }
+@media (max-width: 480px) {
+  html { scroll-padding-top: 100px; }
+  html:has(.navbar.compact) { scroll-padding-top: 74px; }
+  .nav-container { flex-direction: column; gap: 10px; }
+  .nav-links { flex-wrap: wrap; justify-content: center; }
+  .hero-content { padding: 24px 16px; }
+  .hero h1 { font-size: 32px; }
+  .carousel-content { width: calc(100% - 64px); }
+  .carousel-arrow { width: 32px; flex-shrink: 0; }
+  .project-slide { padding: 20px 10px; }
+  .project-video { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}

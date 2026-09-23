@@ -1,5 +1,4 @@
 const path = require("path");
-const CopyPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
@@ -9,7 +8,7 @@ module.exports = {
     static: { directory: path.resolve(__dirname, 'build') },
     open: true,
     host: "localhost",
-    watchFiles: 'index.html',
+    watchFiles: 'src/index.html',
   },
   context: path.join(__dirname, 'src'),
   entry: "./index.js",
@@ -24,7 +23,7 @@ module.exports = {
         use: ["style-loader", "css-loader", "postcss-loader", "sass-loader"],
       },
       {
-        test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
+        test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif|mp4)$/i,
         type: "asset",
       },
       {
@@ -34,17 +33,13 @@ module.exports = {
     ],
   },
   plugins: [
-    new CopyPlugin({
-      patterns: [
-        { from: './assets/', to: './assets/' },
-      ],
-    }),
     new HtmlWebpackPlugin({
       template: "index.html",
       inject: 'body',
     }),
   ],
   output: {
+    clean: true,
     filename: 'bundle.js',
     path: path.resolve(__dirname, "build"),
   },

@@ -1,13 +1,466 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MP1</title>
-    </head>
-    <body>
-        <h1>Hello World! Welcome to MP1!</h1>
-        <img src="assets/image.jpg">
-    </body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Honne Bezabih | Portfolio</title>
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+
+  <!-- Font Awesome scalable vector icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+</head>
+
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-container">
+
+      <a href="#home" class="brand">HB</a>
+
+      <div class="nav-links">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#video" class="nav-link">Video</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+
+    </div>
+  </nav>
+
+
+  <!-- ================= HERO ================= -->
+  <header id="home" class="hero page-section">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+      <p class="hero-small">Hello, I'm</p>
+
+      <h1>Honne Bezabih</h1>
+
+      <h2>Computer Science Student</h2>
+
+      <p>
+        University of Illinois Urbana-Champaign
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#projects" class="button primary-button">
+          View My Projects
+        </a>
+
+        <a href="#contact" class="button secondary-button">
+          Contact Me
+        </a>
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+    <!-- ================= ABOUT ================= -->
+    <section id="about" class="about page-section">
+
+      <div class="section-container">
+
+        <h2 class="section-title">About Me</h2>
+
+        <div class="title-line"></div>
+
+        <p class="section-intro">
+          I am a Computer Science student at the University of Illinois
+          Urbana-Champaign interested in software development and building
+          useful applications.
+        </p>
+
+        <div class="about-grid">
+
+          <div class="about-card">
+            <i class="fa-solid fa-graduation-cap"></i>
+
+            <h3>Education</h3>
+
+            <p>
+              B.S. in Computer Science
+            </p>
+
+            <p>
+              University of Illinois Urbana-Champaign
+            </p>
+
+            <p>
+              Expected May 2027
+            </p>
+          </div>
+
+
+          <div class="about-card">
+            <i class="fa-solid fa-code"></i>
+
+            <h3>Development</h3>
+
+            <p>
+              I enjoy developing applications using Java, C++, Python,
+              JavaScript, React, HTML, CSS, and other technologies.
+            </p>
+          </div>
+
+
+          <div class="about-card">
+            <i class="fa-solid fa-users"></i>
+
+            <h3>Experience</h3>
+
+            <p>
+              I developed moderation systems and a Discord ModMail bot
+              for African Connect, an online community with more than
+              10,000 members.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= PROJECT CAROUSEL ================= -->
+    <section id="projects" class="projects page-section">
+
+      <div class="section-container">
+
+        <h2 class="section-title">Projects</h2>
+
+        <div class="title-line"></div>
+
+        <p class="section-intro">
+          A few projects I have worked on.
+        </p>
+
+
+        <div class="carousel">
+
+          <button
+            class="carousel-arrow carousel-prev"
+            aria-label="Previous project"
+          >
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+
+
+          <div class="carousel-content">
+
+            <!-- SLIDE 1 -->
+            <article class="project-slide active">
+
+              <div class="project-icon">
+                <i class="fa-solid fa-calculator"></i>
+              </div>
+
+              <h3>Java Swing Graphing Calculator</h3>
+
+              <p>
+                A desktop graphing calculator built with Java Swing that
+                visualizes linear and quadratic functions through an
+                interactive graphical interface.
+              </p>
+
+              <div class="tech-list">
+                <span>Java</span>
+                <span>Swing</span>
+                <span>OOP</span>
+              </div>
+
+              <button
+                class="details-button"
+                data-project="calculator"
+              >
+                More Details
+              </button>
+
+            </article>
+
+
+            <!-- SLIDE 2 -->
+            <article class="project-slide">
+
+              <div class="project-icon">
+                <i class="fa-solid fa-table-cells"></i>
+              </div>
+
+              <h3>GraphDoku</h3>
+
+              <p>
+                A Java-based logic puzzle project focused on grid
+                interaction, program structure, and object-oriented
+                software design.
+              </p>
+
+              <div class="tech-list">
+                <span>Java</span>
+                <span>Algorithms</span>
+                <span>OOP</span>
+              </div>
+
+              <button
+                class="details-button"
+                data-project="graphdoku"
+              >
+                More Details
+              </button>
+
+            </article>
+
+
+            <!-- SLIDE 3 -->
+            <article class="project-slide">
+
+              <div class="project-icon">
+                <i class="fa-solid fa-book-open"></i>
+              </div>
+
+              <h3>Ethiopian Orthodox Lector App</h3>
+
+              <p>
+                A mobile application providing Ethiopian Orthodox Sunday
+                readings in Amharic and English with Ethiopian calendar
+                support and liturgical content.
+              </p>
+
+              <div class="tech-list">
+                <span>React Native</span>
+                <span>JavaScript</span>
+                <span>Firebase</span>
+              </div>
+
+              <button
+                class="details-button"
+                data-project="lector"
+              >
+                More Details
+              </button>
+
+            </article>
+
+          </div>
+
+
+          <button
+            class="carousel-arrow carousel-next"
+            aria-label="Next project"
+          >
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+
+        </div>
+
+
+        <div class="carousel-dots">
+          <button class="dot active" data-slide="0" aria-label="Project 1"></button>
+          <button class="dot" data-slide="1" aria-label="Project 2"></button>
+          <button class="dot" data-slide="2" aria-label="Project 3"></button>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= SKILLS ================= -->
+    <section id="skills" class="skills page-section">
+
+      <div class="section-container">
+
+        <h2 class="section-title">Skills</h2>
+
+        <div class="title-line"></div>
+
+        <div class="skills-grid">
+
+          <div class="skill-column">
+            <i class="fa-brands fa-java"></i>
+
+            <h3>Languages</h3>
+
+            <p>
+              Java<br>
+              C++<br>
+              Python
+            </p>
+          </div>
+
+
+          <div class="skill-column">
+            <i class="fa-brands fa-js"></i>
+
+            <h3>Web</h3>
+
+            <p>
+              HTML<br>
+              CSS / SCSS<br>
+              JavaScript
+            </p>
+          </div>
+
+
+          <div class="skill-column">
+            <i class="fa-brands fa-react"></i>
+
+            <h3>Frameworks</h3>
+
+            <p>
+              React<br>
+              React Native<br>
+              Angular
+            </p>
+          </div>
+
+
+          <div class="skill-column">
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+
+            <h3>Tools</h3>
+
+            <p>
+              Git & GitHub<br>
+              Linux<br>
+              REST APIs
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section id="video" class="video-section page-section">
+
+  <div class="section-container">
+
+    <h2 class="section-title">GraphDoku Presentation</h2>
+
+    <p class="section-intro">
+      A presentation demonstrating my GraphDoku project.
+    </p>
+
+    <video controls preload="metadata" class="project-video">
+      <source src="./assets/graphdoku-demo.mp4" type="video/mp4">
+
+      Your browser does not support the video tag.
+    </video>
+
+  </div>
+
+</section>
+
+
+
+  </main>
+
+  <!-- ================= CONTACT / FOOTER ================= -->
+  <footer id="contact" class="footer page-section">
+
+    <div class="footer-content">
+
+      <h2>Let's Connect</h2>
+
+      <p>
+        Feel free to reach out about software development,
+        projects, or opportunities.
+      </p>
+
+
+      <a
+        class="email-link"
+        href="mailto:hbeza2@illinois.edu"
+      >
+        hbeza2@illinois.edu
+      </a>
+
+
+      <div class="social-links">
+
+        <a
+          href="https://linkedin.com/in/honne"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+        >
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+
+
+        <a
+          href="https://github.com/honnebh"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+        >
+          <i class="fa-brands fa-github"></i>
+        </a>
+
+      </div>
+
+
+      <p class="copyright">
+        © 2026 Honne Bezabih
+      </p>
+
+    </div>
+
+  </footer>
+
+
+  <!-- ================= MODAL ================= -->
+  <div
+    id="project-modal"
+    class="modal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modal-title"
+    aria-describedby="modal-description"
+    aria-hidden="true"
+  >
+
+    <div class="modal-content">
+
+      <button
+        id="close-modal"
+        class="close-modal"
+        aria-label="Close modal"
+      >
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div id="modal-icon" class="modal-icon"></div>
+
+        <img
+        id="modal-image"
+        class="modal-image"
+        alt="Project screenshot"
+        >
+
+    <h2 id="modal-title"></h2>
+    <p id="modal-description"></p>
+
+    </div>
+
+  </div>
+
+</body>
+
 </html>
